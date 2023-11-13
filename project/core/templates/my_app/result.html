@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Result</title>
 </head>
 <body>
     <nav>
@@ -15,13 +15,14 @@
         <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </nav>
-    <h1>Home Page</h1>
+    <h1>Result Page</h1>
     <hr>
-    {% if result.id %}
-        <p>Task id {{result.id}}</p>
-        <a href="{% url 'check-result' result.id %}">Check Result</a>
+    {% if result %}
+        <p>Result Id : {{result.id}}</p>
+        <p>task_id : {{result.task_id}}</p>
+        <p>status : {{result.status}}</p>
+        <p>state : {{result.state}}</p>
+        <p>Result : {{result.result}}</p>
     {% endif %}
-
-
 </body>
 </html>
